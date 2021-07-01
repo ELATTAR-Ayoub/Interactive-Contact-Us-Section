@@ -11,4 +11,5 @@ The code is very simple:
 If you get stuck in the puzzle and you couldn't see the real contact-us form, just **Double-Click** on the black eye in the center screen, then click on the switch below it, or just set the "fake container" display to *none* or visibility to *hidden*.
 
 ## CodePen:
-**Link:** *here*
+**Link:** https://codepen.io/pen/?template=gOWpWeb
+
