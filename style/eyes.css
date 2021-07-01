@@ -1,0 +1,73 @@
+.fake-contact-container .eye1 {
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    width: 150px;
+    height: 150px;
+}
+.fake-contact-container .eye1::before {
+    width: 80px;
+    height: 80px;
+}
+
+.fake-contact-container .eye2 {
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+    width: 200px;
+    height: 200px;
+    
+}
+.fake-contact-container .eye2::before {
+    width: 70px;
+    height: 100px;
+}
+
+.fake-contact-container .eye3 {
+    position: absolute;
+    left: -50px;
+    bottom: -50px;
+    width: 130px;
+    height: 130px;
+}
+.fake-contact-container .eye3::before {
+    width: 80px;
+    height: 80px;
+}
+.fake-contact-container .eye4 {
+    position: absolute;
+    left: 100px;
+    bottom: -50px;
+    width: 100px;
+    height: 100px;
+}
+.fake-contact-container .eye5 {
+    position: absolute;
+    left: 220px;
+    bottom: -50px;
+    width: 80px;
+    height: 80px;
+}
+.fake-contact-container .eye6 {
+    position: absolute;
+    left: 60px;
+    bottom: 45px;
+    width: 90px;
+    height: 90px;
+}
+
+.fake-contact-container .middle-eye .eye7 {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-color: #1e1e1e;
+}
+.fake-contact-container .middle-eye .eye7::before {
+    width: 90px;
+    height: 90px;
+}
+
+
+.fake-contact-container .eye:hover{
+    background-color: rgb(160, 7, 7);
+} 

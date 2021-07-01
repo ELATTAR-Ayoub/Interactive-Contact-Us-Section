@@ -1,0 +1,171 @@
+.contact-us{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid #fff;
+}
+
+.contact-us h2{
+    margin: 2rem;
+    font-size: 5vh;
+}
+
+.contact-us .astronaut {
+    width: 500px;
+    height: 500px;
+    background: url(/src/img/happy_astronaut.png) no-repeat;
+    position: absolute;
+    left: -25rem;
+    top: -13rem;
+    z-index: 50;
+}
+
+.contact-us .form-contact-us {
+    width: 100%;
+    position: relative;
+}
+
+.name-section, .email-section, .subject-section, .msg-section, .submit-section {
+    position: relative;
+    margin: 25px 15px;
+}
+
+.submit-section {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit-section input {
+    padding: 1rem 5rem;
+    margin: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #f0e7eb;
+    border: none;
+}
+
+.submit-section input:hover {
+    background-color: #9e447d;
+    color: #fff;
+}
+.submit-section input:focus {
+    background-color: #824a79;
+}
+
+.name-section input, 
+.email-section input, 
+.subject-section input, 
+.msg-section textarea{
+    resize: none;
+    width: 100%;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+    color: #fff;
+
+}
+
+.msg-section textarea {
+    height: 20vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    line-height: 1.1;
+}
+
+.name-section label, 
+.email-section label, 
+.subject-section label, 
+.msg-section label{
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    pointer-events: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.name-section label::after, 
+.email-section label::after,
+.subject-section label::after,
+.msg-section label::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid transparent;
+    /* adjust the after event in top of our normal one. */
+    left: 0px;
+    bottom: -2px;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+    z-index: -10;
+}
+
+.content-name, 
+.content-email,
+.content-subject,
+.content-msg {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: transform 0.3s ease;
+}
+
+.name-section input:focus + .label-name .content-name,
+.name-section input:valid + .label-name .content-name,
+.email-section input:focus + .label-email .content-email,
+.email-section input:valid + .label-email .content-email,
+.subject-section input:focus + .label-subject .content-subject,
+.subject-section input:valid + .label-subject .content-subject,
+.msg-section textarea:focus + .label-msg .content-msg,
+.msg-section textarea:valid + .label-msg .content-msg {
+    transform: translateY(-220%);
+    font-size: 15px;
+    color: #cd629b;
+    z-index: 50;
+    text-shadow: -1px 0 rgba(0, 0, 0, 0.4), 
+                0 1px rgba(0, 0, 0, 0.4), 
+                1px 0 rgba(0, 0, 0, 0.4), 
+                0 -1px rgba(0, 0, 0, 0.4);
+}
+
+.msg-section textarea:focus + .label-msg .content-msg,
+.msg-section textarea:valid + .label-msg .content-msg {
+    transform: translateY(-20vh);
+}
+
+.name-section input:focus + .label-name::after,
+.name-section input:valid + .label-name::after,
+.email-section input:focus + .label-email::after,
+.email-section input:valid + .label-email::after,
+.subject-section input:focus + .label-subject::after,
+.subject-section input:valid + .label-subject::after,
+.msg-section textarea:focus + .label-msg::after,
+.msg-section textarea:valid + .label-msg::after{
+    transform: translateX(0%);
+    z-index: 5;
+    border-bottom: 3px solid #cd629b;
+}
+
+
+@media (max-width: 900px) {
+    .contact-us{
+        flex-direction: column;
+    }
+    .pointer-ring, .contact-us .astronaut-img {
+        display: none;
+    }
+    
+}
+
